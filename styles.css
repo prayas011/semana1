@@ -3,34 +3,92 @@ body{
     background-size: cover;
 }
 .container{
-    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .bigContainer{
+    display: flex;
+    opacity: 0.8;
     background-color: white;
     width: 40%;
-    height: 40vh;
+    height: fit-content;
     border-radius: 10px;
     display: inline-flex;
     margin: 25px;
     padding: 10px;
 }
+.bigContainer:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+.bigContainer:not(:hover){
+    opacity: 0.8;
+    transition: 0.5s ease;
+
+}
+
+.smallContainer:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+.smallContainer:not(:hover){
+    opacity: 0.8;
+    transition: 0.5s ease;
+
+}
 .smallContainer{
     background-color: white;
     width: 20%;
-    height: 40vh;
+    opacity: 0.8;
+    height: fit-content;
     border-radius: 10px;
     display: inline-flex;
     margin: 25px;
+    flex-direction: column;
+    padding: 10px;
+    margin: 25px;
+    line-height: 1.4;
 }
-#imgbob{
+.imgbob{
     height: 15vh;
+    background: url("img/idphoto.jpg") no-repeat;
 }
 .data{
-    display: block;
+    order: 3;
 }
 .imgdiv{
-    display: block;
+    order: 2;
 }
 .title{
-    display: block;
+    height: fit-content;
+    order: 1;
 }
+.containerleft{
+        display: flex;
+        flex-direction: column;
+        padding-right: 10px;
+      
+}
+#decription{
+    display: flex;
+}
+
+th, td {
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .imgbob:hover{
+    transform: rotateY(180deg);
+    transition: 0.5s ease-in;
+    background: url("img/football.jpg") no-repeat;
+    background-size: contain;
+  }
+  .imgbob:not(:hover){
+    transition: 0.5s ease-out;
+    background: url("img/idphoto.jpg") no-repeat;
+    background-size: contain;
+  }
